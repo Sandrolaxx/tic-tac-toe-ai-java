@@ -1,3 +1,5 @@
+package model;
+
 public class Classification {
 
     private Integer miniMaxscore;
@@ -24,5 +26,5 @@ public class Classification {
     public void setMove(Move move) {
         this.move = move;
     }
-    
+
 }

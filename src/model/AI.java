@@ -1,3 +1,5 @@
+package model;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +24,9 @@ public class AI {
         var endTime = System.nanoTime();
 
         var formatter = new DecimalFormat("#0.00");
-        var difference = (endTime - startTime)/1e6;
+        var difference = (endTime - startTime) / 1e6;
         System.out.println("\u23F1 Jogada realizada pela I.A em: ".concat(formatter.format(difference).concat("s")));
-
+        System.out.println("--------------------------------------");
     }
 
     private Integer minimax(Board board, Integer depth, EnumPlayer player) {
@@ -71,12 +73,12 @@ public class AI {
     }
 
     private Move getBestMove() {
-        int MAX = Integer.MIN_VALUE;
+        int max = Integer.MIN_VALUE;
         int best = -1;
 
         for (int i = 0; i < childNodes.size(); i++) {
-            if (MAX < childNodes.get(i).getMiniMaxscore()) {
-                MAX = childNodes.get(i).getMiniMaxscore();
+            if (max < childNodes.get(i).getMiniMaxscore()) {
+                max = childNodes.get(i).getMiniMaxscore();
                 best = i;
             }
         }

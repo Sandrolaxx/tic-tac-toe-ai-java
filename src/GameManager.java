@@ -1,10 +1,18 @@
 import java.util.Scanner;
 
+import model.AI;
+import model.Board;
+import model.Player;
+
 public class GameManager {
 
     private Scanner input = new Scanner(System.in);
 
-    public void startGame(Board board, Player player, AI computer) {
+    public void startGame() {
+        var board = new Board();
+        var player = new Player();
+        var computer = new AI();
+
         boolean gameOver = false;
         boolean playAgain = true;
 
@@ -30,7 +38,7 @@ public class GameManager {
             }
 
             System.out.println("Pontos Jogador: " + player.getScore());
-            System.out.println("Pontos Computador: " + computer.getScore());
+            System.out.println("Pontos I.A: " + computer.getScore());
             System.out.println("Gostaria de jogar novamente? S/N");
             String result = input.nextLine();
 

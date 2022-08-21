@@ -1,3 +1,5 @@
+package model;
+
 public class Move {
     private int yAxis;
 
@@ -28,5 +30,5 @@ public class Move {
     public void setxAxis(int xAxis) {
         this.xAxis = xAxis;
     }
-    
+
 }

@@ -1,3 +1,4 @@
+package model;
 import java.util.Scanner;
 
 import model.enums.EnumPlayer;
@@ -22,6 +23,7 @@ public class Player {
         
         board.updateBoard(board.getMovePosition(movementPosition), EnumPlayer.HUMAN);
         System.out.println("Jogada realizada!");
+        System.out.println("--------------------------------------");
     }
 
     private Integer resquestNewMovement() {

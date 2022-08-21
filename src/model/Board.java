@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -25,7 +27,6 @@ public class Board {
         this.getGameBoard()[move.getyAxis()][move.getxAxis()] = player.getValue();
 
         printBoard();
-        System.out.println("----------------------");
     }
 
     public void resetBoardSimulation(Move move) {
@@ -125,14 +126,14 @@ public class Board {
     }
 
     public boolean isGameOver(char[][] gameboard, Player player, AI computer) {
-        // Vitória Horizontal
+        // Vitoria Horizontal
         if (gameboard[0][0] == 'X' && gameboard[0][2] == 'X' && gameboard[0][4] == 'X') {
             System.out.println("Jogador Ganhou\uD83E\uDDD1!");
             player.setScore(player.getScore() + 1);
             return true;
         }
         if (gameboard[0][0] == 'O' && gameboard[0][2] == 'O' && gameboard[0][4] == 'O') {
-            System.out.println("Computador Ganhou\uD83E\uDD16!");
+            System.out.println("I.A Ganhou\uD83E\uDD16!");
             computer.setScore(computer.getScore() + 1);
             return true;
         }
@@ -142,7 +143,7 @@ public class Board {
             return true;
         }
         if (gameboard[1][0] == 'O' && gameboard[1][2] == 'O' && gameboard[1][4] == 'O') {
-            System.out.println("Computador Ganhou\uD83E\uDD16!");
+            System.out.println("I.A Ganhou\uD83E\uDD16!");
             computer.setScore(computer.getScore() + 1);
             return true;
         }
@@ -152,19 +153,19 @@ public class Board {
             return true;
         }
         if (gameboard[2][0] == 'O' && gameboard[2][2] == 'O' && gameboard[2][4] == 'O') {
-            System.out.println("Computador Ganhou\uD83E\uDD16!");
+            System.out.println("I.A Ganhou\uD83E\uDD16!");
             computer.setScore(computer.getScore() + 1);
             return true;
         }
 
-        // Vitória Vertical
+        // Vitoria Vertical
         if (gameboard[0][0] == 'X' && gameboard[1][0] == 'X' && gameboard[2][0] == 'X') {
             System.out.println("Jogador Ganhou\uD83E\uDDD1!");
             player.setScore(player.getScore() + 1);
             return true;
         }
         if (gameboard[0][0] == 'O' && gameboard[1][0] == 'O' && gameboard[2][0] == 'O') {
-            System.out.println("Computador Ganhou\uD83E\uDD16!");
+            System.out.println("I.A Ganhou\uD83E\uDD16!");
             computer.setScore(computer.getScore() + 1);
             return true;
         }
@@ -175,7 +176,7 @@ public class Board {
             return true;
         }
         if (gameboard[0][2] == 'O' && gameboard[1][2] == 'O' && gameboard[2][2] == 'O') {
-            System.out.println("Computador Ganhou\uD83E\uDD16!");
+            System.out.println("I.A Ganhou\uD83E\uDD16!");
             computer.setScore(computer.getScore() + 1);
             return true;
         }
@@ -186,19 +187,19 @@ public class Board {
             return true;
         }
         if (gameboard[0][4] == 'O' && gameboard[1][4] == 'O' && gameboard[2][4] == 'O') {
-            System.out.println("Computador Ganhou\uD83E\uDD16!");
+            System.out.println("I.A Ganhou\uD83E\uDD16!");
             computer.setScore(computer.getScore() + 1);
             return true;
         }
 
-        // Vitória Diagonal
+        // Vitoria Diagonal
         if (gameboard[0][0] == 'X' && gameboard[1][2] == 'X' && gameboard[2][4] == 'X') {
             System.out.println("Jogador Ganhou\uD83E\uDDD1!");
             player.setScore(player.getScore() + 1);
             return true;
         }
         if (gameboard[0][0] == 'O' && gameboard[1][2] == 'O' && gameboard[2][4] == 'O') {
-            System.out.println("Computador Ganhou\uD83E\uDD16!");
+            System.out.println("I.A Ganhou\uD83E\uDD16!");
             computer.setScore(computer.getScore() + 1);
             return true;
         }
@@ -209,7 +210,7 @@ public class Board {
             return true;
         }
         if (gameboard[2][0] == 'O' && gameboard[1][2] == 'O' && gameboard[0][4] == 'O') {
-            System.out.println("Computador Ganhou\uD83E\uDD16!");
+            System.out.println("I.A Ganhou\uD83E\uDD16!");
             computer.setScore(computer.getScore() + 1);
             return true;
         }

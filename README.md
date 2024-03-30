@@ -4,6 +4,8 @@ O algoritmo Minimax é um algoritmo de busca utilizado em jogos de decisão, com
 
 A ideia central do algoritmo Minimax é construir uma árvore de jogadas possíveis, onde os nós representam estados do jogo e as arestas representam as jogadas possíveis a partir desses estados. Em seguida, é feita uma busca recursiva na árvore, alternando entre os jogadores, para determinar o valor de cada nó da árvore.
 
+Este repositório possui uma implementação desse algoritmo, aplicado ao jogo de xadrez, utilizando Java.
+
 ## 🎩Principais etapas do algoritmo Minimax:
 
 **Construção da Árvore de Jogadas**: A árvore é construída começando pelo estado atual do jogo e gerando todos os estados possíveis que podem ser alcançados a partir desse estado, de acordo com as regras do jogo. Isso é feito até que uma condição de parada seja alcançada, como atingir um estado final do jogo ou uma profundidade máxima da árvore.
